@@ -10,6 +10,22 @@
             max-width: 500px;
             margin: auto;
         }
+        .no-focus:focus, 
+        .no-focus:active, 
+        .form-control:focus, 
+        input:focus {
+            outline: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            background-color: transparent !important;
+            caret-color: black; /* Ensures text cursor is still visible */
+        }
+
+        *:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
     </style>
 </head>
 <body class="d-flex align-items-center justify-content-center vh-100 bg-light">
@@ -17,7 +33,7 @@
     <div class="search-container">
         <div class="d-flex align-items-center border border-secondary bg-white rounded-pill p-2 shadow-sm">
             <img src="logo.png" alt="Logo" width="40" height="40" class="ms-2">
-            <input type="text" placeholder="Search..." class="form-control border-0 bg-transparent">
+            <input type="text" placeholder="Search..." class="form-control border-0 bg-transparent no-focus">
         </div>
     </div>
 
